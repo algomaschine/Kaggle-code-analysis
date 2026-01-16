@@ -1,0 +1,98 @@
+1) This is a python script for bird species classification using BirdCLEF 2021 dataset.
+```python
+"image_recog": true
+```
+2) The code reduces the dataset to a subset based on rating filter, recording number per species, and a general row limiter. No imputation or removal of missing values is done.
+```python
+"data_cleansing": "Subset of dataset with rating filter, recording number per species, and general row limiter applied"
+```
+3) The code normalizes the mel spectrogram values to a range of 0 to 255, it does not make use of one-hot-encoding.
+```python
+"data_preprocessing": {
+	"methods_used": ["Normalization"],
+	"details": "Mel spectrogram values are normalized to a range of 0 to 255"
+}
+```
+4) No feature reduction techniques are used. All features in the mel spectrogram are used for model training.
+```python
+"feature_reduction": "None"
+```
+5) No new feature generation techniques are used. The features used are directly obtained from the mel spectrograms.
+```python
+"new_feature_generation": "None"
+```
+6) No clustering or similar data analysis techniques are used.
+```python
+"data_analysis": "None"
+```
+7) The target classes are the species of birds present in the audio files. The code does not estimate the frequencies of the target classes.
+```python
+"target_analysis": {
+	"classes_defined": true,
+	"target_value_frequencies": "Not estimated",
+	"target_balance": "Not analyzed"
+}
+```
+8) The task is a multi-class classification problem.
+```python
+"task_type": "Classification"
+```
+9) The forecast is a class probability.
+```python
+"forecasting_type": "Class probability"
+```
+10) No post-processing of the forecasted target is done.
+```python
+"post_processing": "None"
+```
+11) No other manipulations are done.
+```python
+"other_manipulations": "None"
+```
+12) The architecture consists of a single model.
+```python
+"architecture": "Single model"
+```
+13) No fold testing is done. The data is split into training and validation sets.
+```python
+"fold_testing": false
+```
+14) The learning rate is reduced when a metric has stopped improving using ReduceLROnPlateau callback in Keras.
+```python
+"meta_parameters_optimization": "Learning rate reduction when metric has stopped improving using ReduceLROnPlateau callback in Keras"
+```
+15) The training and validation data are shuffled. The exact percentages are not specified.
+```python
+"train_test_split": {
+	"shuffling": true,
+	"train_percentage": "Not specified",
+	"test_percentage": "Not specified"
+}
+```
+16) No testing is done on an evaluation set outside of the train/test split.
+```python
+"evaluation_set_testing": {
+	"outside_train_test": false,
+	"percentage_used": "Not specified"
+}
+```
+17) The classification model used is a Convolutional Neural Network (CNN).
+```python
+"algorithms_used": ["Convolutional Neural Network (CNN)"]
+```
+17.1) The machine learning implementation uses the Keras and TensorFlow libraries.
+```python
+"framework_package": ["Keras", "TensorFlow"]
+```
+18) The complexity of the solution can be ranked as 6 out of 10.
+```python
+"complexity_rank": 6
+```
+19) The quality of the solution can be ranked as 7 out of 10.
+```python
+"quality_rank": 7
+```
+20) The weaknesses of the solution include lack of data analysis and feature engineering. It can be improved by performing hyperparameter optimization and using more advanced models.
+```python
+"weaknesses": "Lack of data analysis and feature engineering. Lack of hyperparameter optimization and use of more advanced models."
+```
